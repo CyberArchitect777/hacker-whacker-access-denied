@@ -11,9 +11,21 @@ The original game was created during Hackathon 2 of Code Institute's "16-Week Hi
 
 ## Deployment And Repository
 
-The deployed website can be found [here]()
+### Hacker Whacker: Access Denied
 
-The GitHub repository is [here](https://github.com/CyberArchitect777/hacker-whacker-access-denied)
+The links for this project can be found below:
+
+Deployed website: (https://cyberarchitect777.github.io/hacker-whacker-access-denied/)
+
+GitHub repository: (https://github.com/CyberArchitect777/hacker-whacker-access-denied)
+
+### Hacker Whacker (Original)
+
+The links for the original project that this is based on can also be found below:
+
+Deployed website: (https://cyberarchitect777.github.io/hackathon2-hackattack-game-project/)
+
+GitHub repository: (https://github.com/CyberArchitect777/hackathon2-hackattack-game-project)
 
 ## Technical
 
@@ -22,6 +34,7 @@ This site was created using the following technologies:
 - HTML
 - CSS
 - Bootstrap framework
+- JavaScript
 
 ## Team
 
