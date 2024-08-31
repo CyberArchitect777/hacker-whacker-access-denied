@@ -1,0 +1,222 @@
+/* Fonts */
+
+/* H1 font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+/* Button font */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* General styling */
+button, .display-style {
+    border: #ffff;
+    font-family: "Playwrite DE Grund";
+    font-weight: 800;
+}
+
+button:hover, .display-style:hover {
+    color: black;
+    background-color: #7bff00f5;
+    box-shadow:
+        inset 0 0 15px #66ff00,
+        /* inner glow on hover */
+        0 0 10px #eeacd3,
+        /* outer glow on hover */
+        0 0 20px #eeacd3,
+        0 0 30px #FF0099,
+        0 0 40px #FF0099;
+}
+
+/* Background Image*/
+body {
+    background-color: green;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Header information */
+
+/* Hacker Whacker title */
+.h1 {
+    font-family: "Rubik Glitch";
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    margin-top: 30px;
+    text-shadow: 10px 15px 20px #ff0099;
+    text-decoration: none;
+}
+
+/* Logo image */
+#logoimage {
+    width: 75px;
+}
+
+/* Multiple screen buttons */
+
+#menu-screen button,
+#play-again-button,
+#exit-main {
+    font-size: 20px;
+    border-radius: 25px;
+    height: 100px;
+}
+
+#end-game-button, #start-game-button,
+#main-menu-button {
+    background-color: #f9fd05;
+    color: black;
+}
+
+/* Menu screen */
+
+#how-to-play-button:hover {
+    background-color: #f9fd05;
+    color: black;
+}
+
+/* Instructions screen */
+
+#main-menu-button:hover {
+    background-color: #f9fd05;
+    color: black;
+}
+
+#instructions-screen button {
+    font-size: 20px;
+    border-radius: 25px;
+    height: 50px;
+}
+
+ol {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    background-color: black;
+    opacity: 0.8;
+    border: #f9fd05 solid 2px;
+    margin-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+
+.list-group-item {
+    color: #ffff;
+    border: none;
+    background: none;
+    margin-top: 15px;
+}
+
+.list-group {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Game screen */
+
+.hackerbox {
+    margin-bottom: 5px;
+}
+
+#game-screen button, #game-screen .display-style {
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 25px;
+    width: 120px;
+}
+
+#score-display,
+#time-display {
+    color: black;
+    background-color: #7bff00f5;
+    box-shadow: none;
+}
+
+/* Score screen */
+
+#exit-main:hover {
+    background-color: #f9fd05;
+    color: black;
+}
+
+#final-score {
+    color: #ffff;
+    font-size: 25px;
+    background: black;
+    opacity: 0.8;
+    border: #f9fd05 solid 2px;
+    padding: 15px 10px 20px 10px;
+}
+
+/* Utility functions */
+
+.hide {
+    display: none;
+}
+
+.hackerbox {
+    max-width: 110px;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 480px) {
+    .h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #logoimage {
+        width: 125px;
+    }
+
+    .h1 {
+        font-size: 60px;
+    }
+
+    ol {
+        font-size: 20px;
+        padding-bottom: 40px;
+        margin-bottom: 50px;
+    }
+
+    .list-group-item {
+        margin-top: 30px;
+    }
+
+    #instructions-screen button {
+        height: 100px;
+    }
+
+    #final-score {
+        padding: 30px 20px 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    #play-again-button {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .h1 {
+        font-size: 80px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .h1 {
+        font-size: 100px;
+    }
+}
