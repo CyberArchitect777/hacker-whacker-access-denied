@@ -1,7 +1,8 @@
 /* Fonts */
 
-/* H1 font */
+/* H1 fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* Button font */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
@@ -44,7 +45,7 @@ body {
 /* Header information */
 
 /* Hacker Whacker title */
-.h1 {
+/*.h1 {
     font-family: "Rubik Glitch";
     font-size: 30px;
     font-weight: 400;
@@ -52,11 +53,26 @@ body {
     margin-top: 30px;
     text-shadow: 10px 15px 20px #ff0099;
     text-decoration: none;
+}*/
+
+.h1 {
+    font-family: "Press Start 2P";
+    font-size: 35px;
+    font-weight: 200;
+    color: blue;
+    margin-top: 30px;
+    text-shadow: 5px 8px 10px #0000ff;
+    text-decoration: none;
 }
 
-/* Logo image */
-#logoimage {
-    width: 75px;
+.h2 {
+    font-family: "Press Start 2P";
+    font-size: 25px;
+    font-weight: 200;
+    color: red;
+    margin-top: 30px;
+    text-shadow: 5px 8px 10px #ff0000;
+    text-decoration: none;
 }
 
 /* Multiple screen buttons */
@@ -170,18 +186,14 @@ ol {
 
 @media only screen and (min-width: 480px) {
     .h1 {
-        font-size: 40px;
+        /*font-size: 40px;*/
     }
 }
 
 @media only screen and (min-width: 768px) {
 
-    #logoimage {
-        width: 125px;
-    }
-
     .h1 {
-        font-size: 60px;
+        /*font-size: 60px;*/
     }
 
     ol {
@@ -211,12 +223,12 @@ ol {
 
 @media only screen and (min-width: 992px) {
     .h1 {
-        font-size: 80px;
+        /*font-size: 80px;*/
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .h1 {
-        font-size: 100px;
+        /*font-size: 100px;*/
     }
 }
