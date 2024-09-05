@@ -46,24 +46,24 @@ body {
 
 /* Hacker Whacker title and sub-titles */
 
-.h1 {
+.h1, .h2 {
     font-family: "Press Start 2P";
-    font-size: 35px;
     font-weight: 200;
-    color: blue;
-    margin-top: 30px;
-    text-shadow: 5px 8px 10px #0000ff;
     text-decoration: none;
 }
 
+.h1 {
+    font-size: 35px;
+    color: blue;
+    margin-top: 30px;
+    text-shadow: 5px 8px 10px #0000ff;
+}
+
 .h2 {
-    font-family: "Press Start 2P";
     font-size: 25px;
-    font-weight: 200;
     color: red;
     margin-top: 30px;
     text-shadow: 5px 8px 10px #ff0000;
-    text-decoration: none;
 }
 
 /* Multiple screen buttons */
