@@ -44,16 +44,7 @@ body {
 
 /* Header information */
 
-/* Hacker Whacker title */
-/*.h1 {
-    font-family: "Rubik Glitch";
-    font-size: 30px;
-    font-weight: 400;
-    color: white;
-    margin-top: 30px;
-    text-shadow: 10px 15px 20px #ff0099;
-    text-decoration: none;
-}*/
+/* Hacker Whacker title and sub-titles */
 
 .h1 {
     font-family: "Press Start 2P";
