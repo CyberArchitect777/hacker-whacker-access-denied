@@ -53,14 +53,14 @@ body {
 }
 
 .h1 {
-    font-size: 35px;
+    font-size: 20px;
     color: blue;
     margin-top: 30px;
     text-shadow: 5px 8px 10px #0000ff;
 }
 
 .h2 {
-    font-size: 25px;
+    font-size: 15px;
     color: red;
     margin-top: 30px;
     text-shadow: 5px 8px 10px #ff0000;
@@ -175,17 +175,27 @@ ol {
 
 /* Media queries */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 374px) {
     .h1 {
-        /*font-size: 40px;*/
+        font-size: 40px;
+    }
+
+    .h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .h1 {
+        font-size: 40px;
+    }
+
+    .h2 {
+        font-size: 30px;
     }
 }
 
 @media only screen and (min-width: 768px) {
-
-    .h1 {
-        /*font-size: 60px;*/
-    }
 
     ol {
         font-size: 20px;
@@ -210,16 +220,4 @@ ol {
         margin-bottom: 30px;
     }
 
-}
-
-@media only screen and (min-width: 992px) {
-    .h1 {
-        /*font-size: 80px;*/
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .h1 {
-        /*font-size: 100px;*/
-    }
 }
