@@ -41,6 +41,7 @@
                 <section id="menu-screen" class="row sitepage" aria-label="Menu screen" aria-hidden="false">
                     <nav>
                         <button id="menu-start-button" class="col-10 mx-auto mt-5">Start Game</button>
+                        <button id="game-settings-button" class="col-10 mx-auto mt-5">Game Settings</button>
                         <button id="how-to-play-button" class="col-10 mx-auto mt-5">Instructions</button>
                     </nav>
                 </section>
@@ -65,6 +66,16 @@
                         <button id="play-again-button" class="col-10 mx-auto mt-4">Play Again</button>
                         <button id="exit-main" class="col-10 mx-auto mt-3">Exit to Main Menu</button>
                     </nav>
+                </section>
+
+                <!-- Game settings screen -->
+                <section id="settings-screen" class="hide sitepage" aria-label="Settings screen" aria-hidden="true">
+                    <form id="settings-form">
+                        <label for="anti-malware">Anti-malware popups</label>
+                        <input name="anti-malware" id="anti-malware" type="checkbox"></input>
+                        <button id="settings-save-button">Save</button>
+                        <button id="settings-cancel-button">Cancel</button>
+                    </form>
                 </section>
 
                 <!-- Instructions screen -->

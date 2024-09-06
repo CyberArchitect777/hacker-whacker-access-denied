@@ -41,6 +41,11 @@ function setUpButtonEventListeners() {
         displayWindow("game-screen");
     });
 
+    const gameSettingsButton = document.getElementById("game-settings-button");
+    gameSettingsButton.addEventListener("click", function () {
+        displayWindow("settings-screen");
+    });
+
     const instructionsButton = document.getElementById("how-to-play-button");
     instructionsButton.addEventListener("click", function () {
         displayWindow("instructions-screen");
