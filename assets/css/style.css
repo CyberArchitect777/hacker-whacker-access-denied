@@ -53,17 +53,17 @@ body {
 }
 
 .h1 {
-    font-size: 30px;
+    font-size: 35px;
     color: blue;
     margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-shadow: 5px 8px 10px #0000ff;
 }
 
 .h2 {
     font-size: 25px;
     color: red;
-    margin-top: 60px;
+    margin-top: 30px;
     text-shadow: 5px 8px 10px #ff0000;
 }
 
