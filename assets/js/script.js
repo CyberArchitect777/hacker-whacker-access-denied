@@ -10,6 +10,7 @@ const hackerGameData = {
     timeInterval: 1,
     currentScore: 0,
     highScore: 0,
+    antiMalware: false,
     gameRun: "",
     clickFlag: true,
     setUpObject: function () {
@@ -67,6 +68,21 @@ function setUpButtonEventListeners() {
         displayWindow("score-screen");
         gameStartButton.innerText = "Start Game";
         disableStartButton(false);
+    });
+
+    // Game settings screen buttons
+
+    const settingsCancelButton = document.getElementById("settings-cancel-button");
+    settingsCancelButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        displayWindow("menu-screen");
+    });
+
+    const settingsSaveButton = document.getElementById("settings-save-button");
+    settingsSaveButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        hackerGameData.antiMalware = document.getElementById("anti-malware").checked ? true : false;
+        displayWindow("menu-screen");
     });
 
     // Instructions screen buttons
@@ -127,6 +143,9 @@ function displayWindow(windowName) {
         if (oneSitePage.id == windowName) {
             oneSitePage.classList.remove("hide");
             oneSitePage.setAttribute("aria-hidden", "false");
+            if (oneSitePage.id == "settings-screen") {
+                document.getElementById("anti-malware").checked = hackerGameData.antiMalware;
+            }
         } else {
             oneSitePage.classList.add("hide");
             oneSitePage.setAttribute("aria-hidden", "true");

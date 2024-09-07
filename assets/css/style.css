@@ -90,6 +90,17 @@ body {
     color: black;
 }
 
+/* Game settings screen */
+
+#settings-screen form {
+    background-color: black;
+    border: 2px solid yellow;
+}
+
+#settings-screen label {
+    color: white;
+}
+
 /* Instructions screen */
 
 #main-menu-button:hover {
