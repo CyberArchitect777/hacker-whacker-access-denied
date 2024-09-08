@@ -9,6 +9,14 @@ Welcome to Hacker Whacker: Access Denied, an extension on the original whack-a-m
 
 The original game was created during Hackathon 2 of Code Institute's "16-Week High-Performance Full Stack Skills Bootcamp" which ranged from 02/07/2024 (from 9am) to 04/07/2024 (up to 1.30pm). The purpose of this extension is to progress the project beyond the scope of the assessment and to add features that the developers originally wanted to include.
 
+# Added Features
+
+Hacker Whacker: Access Denied adds the following features on top of the original game:-
+
+- The project logos have been re-branded as is fitting for a new project.
+- A game settings page has been added to allow the user to enable or disable new features.
+- Hackers with shields appear, representing anti-malware software examining your system. Clicking them costs you 20 points, adding a new dimension to the fast-paced game. This mode is selectable in the game options.
+
 ## Deployment And Repository
 
 ### Hacker Whacker: Access Denied
