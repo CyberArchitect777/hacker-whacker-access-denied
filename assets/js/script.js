@@ -200,8 +200,7 @@ function checkAnswer(eventAction) {
             } else {
                 document.getElementById(eventAction.target.id).src = "assets/images/hacker_shieldgreen.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay clicked anti-malware tile image"; 
-            }
-            
+            }            
             setTimeout(() => {
                 document.getElementById(eventAction.target.id).src = "assets/images/desktop.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay desktop tile image";
@@ -263,15 +262,18 @@ function gameStart() {
             displayWindow("score-screen");
         } else {
             const newHackerLocation = Math.floor(Math.random() * 16);
-            const newHackerType = Math.floor(Math.random() * 5)
-            if (newHackerType == 0) {
+            let newHackerType = 0;
+            if (hackerGameData.antiMalware == 1) {
+                newHackerType = Math.floor(Math.random() * 5)
+            }
+            if (newHackerType == 4) {
                 placeHacker(newHackerLocation, 1);
             }
             else {
                 placeHacker(newHackerLocation, 0);
             }
             hackerGameData.hackerLocation = newHackerLocation;
-            hackerGameData.hackerType = newHackerType > 0 ? 0 : 1;
+            hackerGameData.hackerType = newHackerType == 4 ? 1 : 0;
             updateTimeLeft(hackerGameData.currentTime - hackerGameData.timeInterval);
             hackerGameData.clickFlag = false;
         }
