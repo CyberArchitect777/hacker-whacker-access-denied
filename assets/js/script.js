@@ -77,7 +77,7 @@ function setUpButtonEventListeners() {
     antiMalwareSwitch.addEventListener("click", function () {
         if (hackerGameData.antiMalware == 1) {
             hackerGameData.antiMalware = 0;
-            antiMalwareSwitch.style.backgroundColor = "red";
+            antiMalwareSwitch.style.backgroundColor = "red"; /* Set switch colour depending on antiMalware user setting */
         } else {
             hackerGameData.antiMalware = 1;
             antiMalwareSwitch.style.backgroundColor = "lightgreen";
@@ -194,14 +194,14 @@ function checkAnswer(eventAction) {
                 updateGameScore(hackerGameData.currentScore - 20);
             }            
             hackerGameData.clickFlag = true;
-            if (hackerGameData.hackerType == 0) {
+            if (hackerGameData.hackerType == 0) { /* Display green version of the box image after user click for feedback */
                 document.getElementById(eventAction.target.id).src = "assets/images/hacker_skullgreen.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay clicked hacker tile image";    
             } else {
                 document.getElementById(eventAction.target.id).src = "assets/images/hacker_shieldgreen.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay clicked anti-malware tile image"; 
             }            
-            setTimeout(() => {
+            setTimeout(() => { /* Put tile image back on game screen after 200ms */
                 document.getElementById(eventAction.target.id).src = "assets/images/desktop.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay desktop tile image";
             }, 200);
@@ -225,7 +225,7 @@ function removeHacker(hackerPosition) {
 }
 
 /**
- * Places the hacker image on a given box
+ * Places the hacker image on a given box depending on hacker type for this iteration
  **/
 function placeHacker(hackerPosition, hackerType) {
     if (hackerType == 0) {
@@ -264,7 +264,7 @@ function gameStart() {
             const newHackerLocation = Math.floor(Math.random() * 16);
             let newHackerType = 0;
             if (hackerGameData.antiMalware == 1) {
-                newHackerType = Math.floor(Math.random() * 5)
+                newHackerType = Math.floor(Math.random() * 5) /* Gives a 20% chance of getting a anti-malware box */
             }
             if (newHackerType == 4) {
                 placeHacker(newHackerLocation, 1);
