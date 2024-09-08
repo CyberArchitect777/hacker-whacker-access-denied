@@ -6,6 +6,7 @@
  */
 const hackerGameData = {
     hackerLocation: -1,
+    hackerType: 0,
     gameRounds: 30,
     timeInterval: 1,
     currentScore: 0,
@@ -192,10 +193,20 @@ function checkAnswer(eventAction) {
     let targetBox = (eventAction.target.id).substring(5);
     if (hackerGameData.clickFlag != true) {
         if (targetBox == hackerGameData.hackerLocation) {
-            updateGameScore(hackerGameData.currentScore + 5);
+            if (hackerGameData.hackerType == 0) {
+                updateGameScore(hackerGameData.currentScore + 5);
+            } else {
+                updateGameScore(hackerGameData.currentScore - 20);
+            }            
             hackerGameData.clickFlag = true;
-            document.getElementById(eventAction.target.id).src = "assets/images/hacker_skullgreen.png";
-            document.getElementById(eventAction.target.id).alt = "Gameplay clicked hacker tile image";
+            if (hackerGameData.hackerType == 0) {
+                document.getElementById(eventAction.target.id).src = "assets/images/hacker_skullgreen.png";
+                document.getElementById(eventAction.target.id).alt = "Gameplay clicked hacker tile image";    
+            } else {
+                document.getElementById(eventAction.target.id).src = "assets/images/hacker_shieldgreen.png";
+                document.getElementById(eventAction.target.id).alt = "Gameplay clicked anti-malware tile image"; 
+            }
+            
             setTimeout(() => {
                 document.getElementById(eventAction.target.id).src = "assets/images/desktop.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay desktop tile image";
@@ -222,9 +233,14 @@ function removeHacker(hackerPosition) {
 /**
  * Places the hacker image on a given box
  **/
-function placeHacker(hackerPosition) {
-    document.getElementById("image" + hackerPosition).src = "assets/images/hacker_skull.png";
-    document.getElementById("image" + hackerPosition).alt = "Gameplay unclicked hacker tile image";
+function placeHacker(hackerPosition, hackerType) {
+    if (hackerType == 0) {
+        document.getElementById("image" + hackerPosition).src = "assets/images/hacker_skull.png";
+        document.getElementById("image" + hackerPosition).alt = "Gameplay unclicked hacker tile image";
+    } else {
+        document.getElementById("image" + hackerPosition).src = "assets/images/hacker_shield.png";
+        document.getElementById("image" + hackerPosition).alt = "Gameplay unclicked anti-malware tile image";
+    }
 }
 
 /**
@@ -252,8 +268,15 @@ function gameStart() {
             displayWindow("score-screen");
         } else {
             const newHackerLocation = Math.floor(Math.random() * 16);
-            placeHacker(newHackerLocation);
+            const newHackerType = Math.floor(Math.random() * 5)
+            if (newHackerType == 0) {
+                placeHacker(newHackerLocation, 1);
+            }
+            else {
+                placeHacker(newHackerLocation, 0);
+            }
             hackerGameData.hackerLocation = newHackerLocation;
+            hackerGameData.hackerType = newHackerType > 0 ? 0 : 1;
             updateTimeLeft(hackerGameData.currentTime - hackerGameData.timeInterval);
             hackerGameData.clickFlag = false;
         }
