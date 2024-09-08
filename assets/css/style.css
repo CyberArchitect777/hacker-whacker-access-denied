@@ -92,13 +92,18 @@ body {
 
 /* Game settings screen */
 
-#settings-screen form {
+#settings-screen {
     background-color: black;
-    border: 2px solid yellow;
 }
 
-#settings-screen label {
+#settings-screen p {
     color: white;
+}
+
+#anti-malware-switch {
+    background-color: lightgreen;
+    width: 25px;
+    height: 25px;
 }
 
 /* Instructions screen */

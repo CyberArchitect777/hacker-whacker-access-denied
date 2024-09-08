@@ -69,17 +69,12 @@
                 </section>
 
                 <!-- Game settings screen -->
-                <section id="settings-screen" class="hide sitepage" aria-label="Settings screen" aria-hidden="true">
-                    <form id="settings-form" class="mt-5 pt-5 pb-5">
-                        <div>
-                            <label for="anti-malware" class="me-3">Anti-malware popups (lose 20 points for each one)</label>
-                            <input name="anti-malware" id="anti-malware" type="checkbox"></input>
-                        </div>
-                        <div class="mt-5">
-                            <button id="settings-save-button" class="me-3">Save</button>
-                            <button id="settings-cancel-button" class="ms-3">Discard</button>
-                        </div>
-                    </form>
+                <section id="settings-screen" class="hide sitepage pb-4" aria-label="Settings screen" aria-hidden="true">
+                    <p class="mt-5 pt-4">Click the apropriate box to select different game modes:</p>
+                    <div class="pt-3 d-flex justify-content-center">
+                        <p class="me-3">Anti-Malware Avoidance Mode</p>
+                        <div class="ms-3" id="anti-malware-switch"></div>
+                    </div>
                 </section>
 
                 <!-- Instructions screen -->
