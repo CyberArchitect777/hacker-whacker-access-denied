@@ -198,7 +198,7 @@ function checkAnswer(eventAction) {
                 document.getElementById(eventAction.target.id).src = "assets/images/hacker_skullgreen.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay clicked hacker tile image";    
             } else {
-                document.getElementById(eventAction.target.id).src = "assets/images/hacker_shieldgreen.png";
+                document.getElementById(eventAction.target.id).src = "assets/images/hacker_shieldred.png";
                 document.getElementById(eventAction.target.id).alt = "Gameplay clicked anti-malware tile image"; 
             }            
             setTimeout(() => { /* Put tile image back on game screen after 200ms */
