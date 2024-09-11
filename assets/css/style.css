@@ -67,6 +67,10 @@ body {
     text-shadow: 5px 8px 10px #ff0000;
 }
 
+.logos {
+    cursor: pointer;
+}
+
 /* Multiple screen buttons */
 
 #menu-screen button,

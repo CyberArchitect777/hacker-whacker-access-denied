@@ -28,12 +28,14 @@ function setUpButtonEventListeners() {
 
     // All screens
 
-    const logoText = document.querySelector("header a");
-    logoText.addEventListener("click", function () {
-        exitLoop();
-        resetGame();
-        displayWindow("menu-screen");
-        disableStartButton(false);
+    const logoText1 = document.getElementById("logo1");
+    logoText1.addEventListener("click", function () {
+        logoPress();    
+    });
+
+    const logoText2 = document.getElementById("logo2");
+    logoText2.addEventListener("click", function () {
+        logoPress();    
     });
 
     // Main menu buttons
@@ -106,6 +108,16 @@ function setUpButtonEventListeners() {
         resetGame();
         displayWindow("menu-screen");
     });
+}
+
+/** 
+ * Reset the game if the game logos are clicked or pressed 
+ */
+function logoPress() {
+    exitLoop();
+    resetGame();
+    displayWindow("menu-screen");
+    disableStartButton(false);
 }
 
 /**
