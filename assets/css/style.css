@@ -22,15 +22,21 @@ button, .display-style {
 
 button:hover, .display-style:hover {
     color: black;
-    background-color: #7bff00f5;
+    /*background-color: #7bff00f5;*/
+    background-color: #55F;
     box-shadow:
-        inset 0 0 15px #66ff00,
+        inset 0 0 15px #F55,
+        /*inset 0 0 15px #66ff00,*/
         /* inner glow on hover */
-        0 0 10px #eeacd3,
+        /*0 0 10px #eeacd3,*/
+        0 0 10px #F55,
         /* outer glow on hover */
-        0 0 20px #eeacd3,
+        /*0 0 20px #eeacd3,
         0 0 30px #FF0099,
-        0 0 40px #FF0099;
+        0 0 40px #FF0099;*/
+        0 0 20px #F55,
+        0 0 30px #F55,
+        0 0 40px #F55;
 }
 
 /* Background Image*/
@@ -83,14 +89,14 @@ body {
 
 #end-game-button, #start-game-button,
 #main-menu-button {
-    background-color: #f9fd05;
+    background-color: #55F;
     color: black;
 }
 
 /* Menu screen */
 
 #how-to-play-button:hover {
-    background-color: #f9fd05;
+    background-color: #55F;
     color: black;
 }
 
@@ -118,14 +124,14 @@ body {
 }
 
 #main-menu-button1:hover {
-    background-color: #f9fd05;
+    background-color: #55F;
     color: black;
 }
 
 /* Instructions screen */
 
 #main-menu-button2:hover {
-    background-color: #f9fd05;
+    background-color: #55F;
     color: black;
 }
 
@@ -176,14 +182,14 @@ ol {
 #score-display,
 #time-display {
     color: black;
-    background-color: #7bff00f5;
+    background-color: #55F;
     box-shadow: none;
 }
 
 /* Score screen */
 
 #exit-main:hover {
-    background-color: #f9fd05;
+    background-color: #55F;
     color: black;
 }
 
