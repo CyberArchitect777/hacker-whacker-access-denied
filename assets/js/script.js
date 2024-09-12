@@ -86,10 +86,15 @@ function setUpButtonEventListeners() {
         }        
     });
 
+    const mainMenuButton1 = document.getElementById("main-menu-button1");
+    mainMenuButton1.addEventListener("click", function () {
+        displayWindow("menu-screen");
+    });
+
     // Instructions screen buttons
 
-    const mainMenuButton = document.getElementById("main-menu-button");
-    mainMenuButton.addEventListener("click", function () {
+    const mainMenuButton2 = document.getElementById("main-menu-button2");
+    mainMenuButton2.addEventListener("click", function () {
         displayWindow("menu-screen");
     });
 

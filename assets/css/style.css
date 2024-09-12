@@ -96,12 +96,19 @@ body {
 
 /* Game settings screen */
 
-#settings-screen {
+#settings-options {
     background-color: black;
+    border: #f9fd05 solid 2px;
 }
 
-#settings-screen p {
+#settings-options p {
     color: white;
+}
+
+#settings-screen button {
+    font-size: 20px;
+    border-radius: 25px;
+    height: 50px;
 }
 
 #anti-malware-switch {
@@ -110,9 +117,14 @@ body {
     height: 25px;
 }
 
+#main-menu-button1:hover {
+    background-color: #f9fd05;
+    color: black;
+}
+
 /* Instructions screen */
 
-#main-menu-button:hover {
+#main-menu-button2:hover {
     background-color: #f9fd05;
     color: black;
 }
@@ -229,6 +241,10 @@ ol {
     }
 
     #instructions-screen button {
+        height: 100px;
+    }
+
+    #settings-screen button {
         height: 100px;
     }
 
