@@ -202,6 +202,8 @@ function setUpListeners() {
  * Checks the location of the user action against the actual location of the hacker and adjusts the score apropriately
  **/
 function checkAnswer(eventAction) {
+    let clickSound = new Audio("assets/sounds/click.mp3");
+    clickSound.play();
     let targetBox = (eventAction.target.id).substring(5);
     if (hackerGameData.clickFlag != true) {
         if (targetBox == hackerGameData.hackerLocation) {

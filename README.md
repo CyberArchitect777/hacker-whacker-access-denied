@@ -53,3 +53,8 @@ The original team involved in producing Hacker Whacker are shown below. As state
 * Ahmed Alvi - (https://github.com/coder-alvi)
 
 * Sunita Arora - (https://github.com/AroraSunita)
+
+## Credits
+
+- Click sound - Blaster Shot by UNIVERSFIELD -- https://freesound.org/s/750234/ -- License: Attribution 4.0
+
