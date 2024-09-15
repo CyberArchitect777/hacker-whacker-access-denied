@@ -215,13 +215,14 @@ function setUpListeners() {
  * Checks the location of the user action against the actual location of the hacker and adjusts the score apropriately
  **/
 function checkAnswer(eventAction) {
-    new Audio("assets/sounds/click.mp3").play(); // Play sound on click
     let targetBox = (eventAction.target.id).substring(5);
     if (hackerGameData.clickFlag != true) {
         if (targetBox == hackerGameData.hackerLocation) {
             if (hackerGameData.hackerType == 0) {
+                new Audio("assets/sounds/success.wav").play(); // Play success sound after succeeding
                 updateGameScore(hackerGameData.currentScore + 5);
             } else {
+                new Audio("assets/sounds/fail.ogg").play(); // Play fail sound after succeeding
                 updateGameScore(hackerGameData.currentScore - 20);
             }            
             hackerGameData.clickFlag = true;
@@ -230,7 +231,7 @@ function checkAnswer(eventAction) {
                 document.getElementById(eventAction.target.id).alt = "Gameplay clicked hacker tile image";    
             } else {
                 document.getElementById(eventAction.target.id).src = "assets/images/hacker_shieldred.png";
-                document.getElementById(eventAction.target.id).alt = "Gameplay clicked anti-malware tile image"; 
+                document.getElementById(eventAction.target.id).alt = "Gameplay clicked anti-malware tile image";
             }            
             setTimeout(() => { /* Put tile image back on game screen after 200ms */
                 document.getElementById(eventAction.target.id).src = "assets/images/desktop.png";
@@ -238,6 +239,7 @@ function checkAnswer(eventAction) {
             }, 200);
         } else {
             updateGameScore(hackerGameData.currentScore - 10);
+            new Audio("assets/sounds/fail.ogg").play();
             hackerGameData.clickFlag = true;
             document.getElementById(eventAction.target.id).style.backgroundColor = "red";
             setTimeout(() => {
