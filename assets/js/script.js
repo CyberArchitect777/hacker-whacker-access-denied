@@ -14,6 +14,7 @@ const hackerGameData = {
     antiMalware: true,
     gameRun: "",
     clickFlag: true,
+    //clickSound: new Audio("assets/sounds/click.mp3"),
     setUpObject: function () {
         this.hackerLocation = -1;
         this.currentScore = 0;
@@ -30,11 +31,13 @@ function setUpButtonEventListeners() {
 
     const logoText1 = document.getElementById("logo1");
     logoText1.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         logoPress();    
     });
 
     const logoText2 = document.getElementById("logo2");
     logoText2.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         logoPress();    
     });
 
@@ -42,16 +45,19 @@ function setUpButtonEventListeners() {
 
     const menuStartGameButton = document.getElementById("menu-start-button");
     menuStartGameButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         displayWindow("game-screen");
     });
 
     const gameSettingsButton = document.getElementById("game-settings-button");
     gameSettingsButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         displayWindow("settings-screen");
     });
 
     const instructionsButton = document.getElementById("how-to-play-button");
     instructionsButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         displayWindow("instructions-screen");
     });
 
@@ -59,12 +65,14 @@ function setUpButtonEventListeners() {
 
     const gameStartButton = document.getElementById("start-game-button");
     gameStartButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         gameStartButton.innerText = "Started";
         gameStart();
     });
 
     const gameEndButton = document.getElementById("end-game-button");
     gameEndButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         exitLoop();
         hackerGameData.clickFlag = true;
         updateFinalScore();
@@ -77,6 +85,7 @@ function setUpButtonEventListeners() {
 
     const antiMalwareSwitch = document.getElementById("anti-malware-switch");
     antiMalwareSwitch.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         if (hackerGameData.antiMalware == 1) {
             hackerGameData.antiMalware = 0;
             antiMalwareSwitch.style.backgroundColor = "red"; /* Set switch colour depending on antiMalware user setting */
@@ -88,6 +97,7 @@ function setUpButtonEventListeners() {
 
     const mainMenuButton1 = document.getElementById("main-menu-button1");
     mainMenuButton1.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         displayWindow("menu-screen");
     });
 
@@ -95,6 +105,7 @@ function setUpButtonEventListeners() {
 
     const mainMenuButton2 = document.getElementById("main-menu-button2");
     mainMenuButton2.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         displayWindow("menu-screen");
     });
 
@@ -102,6 +113,7 @@ function setUpButtonEventListeners() {
 
     const playAgainButton = document.getElementById("play-again-button");
     playAgainButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         resetGame();
         displayWindow("game-screen");
         gameStartButton.innerText = "Started";
@@ -110,6 +122,7 @@ function setUpButtonEventListeners() {
 
     const exitMenuButton = document.getElementById("exit-main");
     exitMenuButton.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         resetGame();
         displayWindow("menu-screen");
     });
@@ -202,8 +215,7 @@ function setUpListeners() {
  * Checks the location of the user action against the actual location of the hacker and adjusts the score apropriately
  **/
 function checkAnswer(eventAction) {
-    let clickSound = new Audio("assets/sounds/click.mp3");
-    clickSound.play();
+    new Audio("assets/sounds/click.mp3").play(); // Play sound on click
     let targetBox = (eventAction.target.id).substring(5);
     if (hackerGameData.clickFlag != true) {
         if (targetBox == hackerGameData.hackerLocation) {
