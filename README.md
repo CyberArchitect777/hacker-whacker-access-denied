@@ -16,6 +16,7 @@ Hacker Whacker: Access Denied adds the following features on top of the original
 - The project logos have been re-branded as is fitting for a new project.
 - A game settings page has been added to allow the user to enable or disable new features.
 - Hackers with shields appear, representing anti-malware software examining your system. Clicking them costs you 20 points, adding a new dimension to the fast-paced game. This mode is selectable in the game options.
+- Sounds have been added to promote user immersion in the game
 
 ## Deployment And Repository
 
