@@ -27,20 +27,6 @@ function setUpButtonEventListeners() {
 
     // Button event listener set up area
 
-    // All screens
-
-    const logoText1 = document.getElementById("logo1");
-    logoText1.addEventListener("click", function () {
-        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
-        logoPress();    
-    });
-
-    const logoText2 = document.getElementById("logo2");
-    logoText2.addEventListener("click", function () {
-        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
-        logoPress();    
-    });
-
     // Main menu buttons
 
     const menuStartGameButton = document.getElementById("menu-start-button");
@@ -126,16 +112,6 @@ function setUpButtonEventListeners() {
         resetGame();
         displayWindow("menu-screen");
     });
-}
-
-/** 
- * Reset the game if the game logos are clicked or pressed 
- */
-function logoPress() {
-    exitLoop();
-    resetGame();
-    displayWindow("menu-screen");
-    disableStartButton(false);
 }
 
 /**
