@@ -58,4 +58,4 @@ The original team involved in producing Hacker Whacker are shown below. As state
 
 - Click sound - Blaster Shot by UNIVERSFIELD -- https://freesound.org/s/750234/ -- License: Attribution 4.0
 - Success sound - Success Jingle by JustInvoke -- https://freesound.org/s/446111/ -- License: Attribution 4.0
-- Fail sound - fruitbite.ogg by metekavruk -- https://freesound.org/s/348271/ -- License: Attribution 3.0
+- Fail sound - error by Leszek_Szary -- https://freesound.org/s/171497/ -- License: Creative Commons 0

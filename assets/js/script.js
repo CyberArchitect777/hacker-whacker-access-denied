@@ -222,7 +222,7 @@ function checkAnswer(eventAction) {
                 new Audio("assets/sounds/success.wav").play(); // Play success sound after succeeding
                 updateGameScore(hackerGameData.currentScore + 5);
             } else {
-                new Audio("assets/sounds/fail.ogg").play(); // Play fail sound after succeeding
+                new Audio("assets/sounds/fail.wav").play(); // Play fail sound after succeeding
                 updateGameScore(hackerGameData.currentScore - 20);
             }            
             hackerGameData.clickFlag = true;
@@ -239,7 +239,7 @@ function checkAnswer(eventAction) {
             }, 200);
         } else {
             updateGameScore(hackerGameData.currentScore - 10);
-            new Audio("assets/sounds/fail.ogg").play();
+            new Audio("assets/sounds/fail.wav").play();
             hackerGameData.clickFlag = true;
             document.getElementById(eventAction.target.id).style.backgroundColor = "red";
             setTimeout(() => {
