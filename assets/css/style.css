@@ -61,7 +61,7 @@ body {
 .h1 {
     font-size: 35px;
     color: blue;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
     text-shadow: 5px 8px 10px #0000ff;
 }
@@ -69,7 +69,7 @@ body {
 .h2 {
     font-size: 25px;
     color: red;
-    margin-top: 30px;
+    margin-top: 0px;
     text-shadow: 5px 8px 10px #ff0000;
 }
 
@@ -80,7 +80,7 @@ body {
 #exit-main {
     font-size: 20px;
     border-radius: 25px;
-    height: 100px;
+    height: 60px;
 }
 
 #end-game-button, #start-game-button,
@@ -147,7 +147,7 @@ ol {
     background-color: black;
     opacity: 0.8;
     border: #f9fd05 solid 2px;
-    margin-top: 30px;
+    margin-top: 15px;
     padding-right: 30px;
     padding-bottom: 15px;
 }
