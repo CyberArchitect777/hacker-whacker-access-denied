@@ -101,6 +101,8 @@ body {
 #settings-options {
     background-color: black;
     border: #f9fd05 solid 2px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #settings-options p {
