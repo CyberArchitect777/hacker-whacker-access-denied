@@ -12,6 +12,7 @@ const hackerGameData = {
     currentScore: 0,
     highScore: 0,
     antiMalware: true,
+    turboSpeed: false,
     gameRun: "",
     clickFlag: true,
     //clickSound: new Audio("assets/sounds/click.mp3"),
@@ -72,13 +73,15 @@ function setUpButtonEventListeners() {
     const antiMalwareSwitch = document.getElementById("anti-malware-switch");
     antiMalwareSwitch.addEventListener("click", function () {
         new Audio("assets/sounds/click.mp3").play(); // Play sound on click
-        if (hackerGameData.antiMalware == 1) {
-            hackerGameData.antiMalware = 0;
-            antiMalwareSwitch.style.backgroundColor = "red"; /* Set switch colour depending on antiMalware user setting */
-        } else {
-            hackerGameData.antiMalware = 1;
-            antiMalwareSwitch.style.backgroundColor = "lightgreen";
-        }        
+        hackerGameData.antiMalware = hackerGameData.antiMalware ? false : true; 
+        setIndividualSettingColours(hackerGameData.antiMalware, antiMalwareSwitch);
+    });
+
+    const turboSpeedSwitch = document.getElementById("turbo-speed-switch");
+    turboSpeedSwitch.addEventListener("click", function () {
+        new Audio("assets/sounds/click.mp3").play(); // Play sound on click
+        hackerGameData.turboSpeedSwitch = hackerGameData.turboSpeedSwitch ? false : true; 
+        setIndividualSettingColours(hackerGameData.turboSpeedSwitch, turboSpeedSwitch);
     });
 
     const mainMenuButton1 = document.getElementById("main-menu-button1");
@@ -185,6 +188,25 @@ function setUpListeners() {
         let selectedImage = document.getElementById("image" + x);
         selectedImage.addEventListener("click", checkAnswer);
     }
+}
+
+/**
+ * Sets the colour of individual items in the settings panel based on current game settings 
+ */
+function setIndividualSettingColours(dataElement, pageElement) {
+    if (dataElement == true) {
+        pageElement.style.backgroundColor = "lightgreen"; /* Set switch colour to red if option is off */
+    } else {
+        pageElement.style.backgroundColor = "red"; /* Set switch colour to lightgreen if option is off */
+    }
+}
+
+/**
+ * Set the colour of all settings menu items to those matching the current game settings
+ */
+function setAllSettingColours() {
+    setIndividualSettingColours(hackerGameData.antiMalware, document.getElementById("anti-malware-switch"));
+    setIndividualSettingColours(hackerGameData.turboSpeed, document.getElementById("turbo-speed-switch"));
 }
 
 /**
@@ -334,3 +356,4 @@ const disableStartButton = buttonState => (document.getElementById("start-game-b
 
 setUpButtonEventListeners();
 setUpInitialGame();
+setAllSettingColours();
