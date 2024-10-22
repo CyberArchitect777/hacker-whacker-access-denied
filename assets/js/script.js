@@ -12,7 +12,7 @@ const hackerGameData = {
     currentScore: 0,
     highScore: 0,
     antiMalware: true,
-    turboSpeed: false,
+    gameSpeed: 1,
     gameRun: "",
     clickFlag: true,
     //clickSound: new Audio("assets/sounds/click.mp3"),
@@ -77,18 +77,23 @@ function setUpButtonEventListeners() {
         setIndividualSettingColours(hackerGameData.antiMalware, antiMalwareSwitch);
     });
 
-    const turboSpeedSwitch = document.getElementById("turbo-speed-switch");
-    turboSpeedSwitch.addEventListener("click", function () {
+    const speedSwitch = document.getElementById("speed-switch");
+    speedSwitch.addEventListener("click", function () {
         new Audio("assets/sounds/click.mp3").play(); // Play sound on click
-        hackerGameData.turboSpeedSwitch = hackerGameData.turboSpeedSwitch ? false : true; 
-        if (hackerGameData.turboSpeedSwitch === true) {
+        if (hackerGameData.gameSpeed === 0) {
+            hackerGameData.gameSpeed = 1;
+            hackerGameData.gameRounds = 30;
+            hackerGameData.timeInterval = 1;
+        } else if (hackerGameData.gameSpeed === 1) {
+            hackerGameData.gameSpeed = 2;
             hackerGameData.gameRounds = 15;
             hackerGameData.timeInterval = 0.5;
         } else {
-            hackerGameData.gameRounds = 30;
-            hackerGameData.timeInterval = 1;
+            hackerGameData.gameSpeed = 0;
+            hackerGameData.gameRounds = 45;
+            hackerGameData.timeInterval = 1.5;
         }
-        setIndividualSettingColours(hackerGameData.turboSpeedSwitch, turboSpeedSwitch);
+        setSpeedColours();
     });
 
     const mainMenuButton1 = document.getElementById("main-menu-button1");
@@ -198,7 +203,8 @@ function setUpListeners() {
 }
 
 /**
- * Sets the colour of individual items in the settings panel based on current game settings 
+ * Sets the colour of individual items in the settings panel based on current game settings. 
+ * Only applies to boolean settings
  */
 function setIndividualSettingColours(dataElement, pageElement) {
     if (dataElement == true) {
@@ -213,7 +219,30 @@ function setIndividualSettingColours(dataElement, pageElement) {
  */
 function setAllSettingColours() {
     setIndividualSettingColours(hackerGameData.antiMalware, document.getElementById("anti-malware-switch"));
-    setIndividualSettingColours(hackerGameData.turboSpeed, document.getElementById("turbo-speed-switch"));
+    setSpeedColours();
+}
+
+/**
+ * Change the game speed setting and adjust the interface in the settings panel to reflect this
+ */
+function setSpeedColours() {
+    switch(hackerGameData.gameSpeed) {
+        case 0:
+            document.getElementById("speed-a").style.backgroundColor = "lightgreen";
+            document.getElementById("speed-b").style.backgroundColor = "red";
+            document.getElementById("speed-c").style.backgroundColor = "red";
+            break;
+        case 1:
+            document.getElementById("speed-a").style.backgroundColor = "red";
+            document.getElementById("speed-b").style.backgroundColor = "lightgreen";
+            document.getElementById("speed-c").style.backgroundColor = "red";
+            break;
+        case 2:
+            document.getElementById("speed-a").style.backgroundColor = "red";
+            document.getElementById("speed-b").style.backgroundColor = "red";
+            document.getElementById("speed-c").style.backgroundColor = "lightgreen";
+            break;
+    }
 }
 
 /**

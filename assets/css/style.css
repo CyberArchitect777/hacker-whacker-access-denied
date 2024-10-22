@@ -116,8 +116,20 @@ body {
 }
 
 .option-switch {
-    width: 25px;
+    width: 75px;
     height: 25px;
+}
+
+#option-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+}
+
+#speed-switch {
+    width: 75px;
+    height: 25px;
+    display: flex;
 }
 
 #main-menu-button1:hover {
