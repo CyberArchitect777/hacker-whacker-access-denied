@@ -59,15 +59,15 @@ body {
 }
 
 .h1 {
-    font-size: 35px;
+    font-size: 25px;
     color: blue;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-shadow: 5px 8px 10px #0000ff;
 }
 
 .h2 {
-    font-size: 25px;
+    font-size: 15px;
     color: red;
     margin-top: 0px;
     text-shadow: 5px 8px 10px #ff0000;
@@ -223,13 +223,15 @@ ol {
 
 /* Media queries */
 
-@media only screen and (min-width: 374px) {
+@media only screen and (min-width: 360px) {
     .h1 {
         font-size: 40px;
+        margin-bottom: 30px;
     }
 
     .h2 {
         font-size: 30px;
+        margin-bottom: 10px;
     }
 }
 
