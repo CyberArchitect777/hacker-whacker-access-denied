@@ -81,6 +81,13 @@ function setUpButtonEventListeners() {
     turboSpeedSwitch.addEventListener("click", function () {
         new Audio("assets/sounds/click.mp3").play(); // Play sound on click
         hackerGameData.turboSpeedSwitch = hackerGameData.turboSpeedSwitch ? false : true; 
+        if (hackerGameData.turboSpeedSwitch === true) {
+            hackerGameData.gameRounds = 15;
+            hackerGameData.timeInterval = 0.5;
+        } else {
+            hackerGameData.gameRounds = 30;
+            hackerGameData.timeInterval = 1;
+        }
         setIndividualSettingColours(hackerGameData.turboSpeedSwitch, turboSpeedSwitch);
     });
 
@@ -332,7 +339,7 @@ const updateGameScore = newScore => {
  **/
 const updateTimeLeft = newTime => {
     hackerGameData.currentTime = Number(newTime);
-    document.getElementById("time-display").innerText = "Time: " + newTime;
+    document.getElementById("time-display").innerText = "Time: " + Math.round(newTime);
 };
 
 /**
