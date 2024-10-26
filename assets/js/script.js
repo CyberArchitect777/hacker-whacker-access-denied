@@ -208,10 +208,8 @@ function setUpListeners() {
  */
 function setIndividualSettingColours(dataElement, pageElement) {
     if (dataElement == true) {
-        pageElement.style.borderColor = "lightgreen"; /* Set switch colour to red if option is off */
         pageElement.innerText = "ON";
     } else {
-        pageElement.style.borderColor = "red"; /* Set switch colour to lightgreen if option is off */
         pageElement.innerText = "OFF";
     }
 }
@@ -230,19 +228,19 @@ function setAllSettingColours() {
 function setSpeedColours() {
     switch(hackerGameData.gameSpeed) {
         case 0:
-            document.getElementById("speed-a").style.backgroundColor = "lightgreen";
+            document.getElementById("speed-a").style.backgroundColor = "green";
             document.getElementById("speed-b").style.backgroundColor = "red";
             document.getElementById("speed-c").style.backgroundColor = "red";
             break;
         case 1:
             document.getElementById("speed-a").style.backgroundColor = "red";
-            document.getElementById("speed-b").style.backgroundColor = "lightgreen";
+            document.getElementById("speed-b").style.backgroundColor = "green";
             document.getElementById("speed-c").style.backgroundColor = "red";
             break;
         case 2:
             document.getElementById("speed-a").style.backgroundColor = "red";
             document.getElementById("speed-b").style.backgroundColor = "red";
-            document.getElementById("speed-c").style.backgroundColor = "lightgreen";
+            document.getElementById("speed-c").style.backgroundColor = "green";
             break;
     }
 }

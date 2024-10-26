@@ -118,7 +118,7 @@ body {
 .option-switch {
     width: 75px;
     height: 25px;
-    border: 2px solid;
+    border: 2px solid black;
 }
 
 #option-columns {
@@ -127,10 +127,15 @@ body {
     justify-items: center;
 }
 
+#anti-malware-switch {
+    border: 2px solid yellow;
+}
+
 #speed-switch {
     width: 75px;
     height: 25px;
-    border: 2px solid;
+    display: flex;
+    border: 2px solid yellow;
 }
 
 #main-menu-button1:hover {
