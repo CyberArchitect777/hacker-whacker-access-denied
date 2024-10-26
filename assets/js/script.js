@@ -93,7 +93,7 @@ function setUpButtonEventListeners() {
             hackerGameData.gameRounds = 45;
             hackerGameData.timeInterval = 1.5;
         }
-        setSpeedColours();
+        setSpeedText();
     });
 
     const mainMenuButton1 = document.getElementById("main-menu-button1");
@@ -219,28 +219,22 @@ function setIndividualSettingColours(dataElement, pageElement) {
  */
 function setAllSettingColours() {
     setIndividualSettingColours(hackerGameData.antiMalware, document.getElementById("anti-malware-switch"));
-    setSpeedColours();
+    setSpeedText();
 }
 
 /**
  * Change the game speed setting and adjust the interface in the settings panel to reflect this
  */
-function setSpeedColours() {
+function setSpeedText() {
     switch(hackerGameData.gameSpeed) {
         case 0:
-            document.getElementById("speed-a").style.backgroundColor = "green";
-            document.getElementById("speed-b").style.backgroundColor = "red";
-            document.getElementById("speed-c").style.backgroundColor = "red";
+            document.getElementById("speed-switch").innerText = "SLOW";
             break;
         case 1:
-            document.getElementById("speed-a").style.backgroundColor = "red";
-            document.getElementById("speed-b").style.backgroundColor = "green";
-            document.getElementById("speed-c").style.backgroundColor = "red";
+            document.getElementById("speed-switch").innerText = "MEDIUM";
             break;
         case 2:
-            document.getElementById("speed-a").style.backgroundColor = "red";
-            document.getElementById("speed-b").style.backgroundColor = "red";
-            document.getElementById("speed-c").style.backgroundColor = "green";
+            document.getElementById("speed-switch").innerText = "FAST";            
             break;
     }
 }
