@@ -118,6 +118,7 @@ body {
 .option-switch {
     width: 75px;
     height: 25px;
+    border: 2px solid;
 }
 
 #option-columns {
@@ -129,7 +130,7 @@ body {
 #speed-switch {
     width: 75px;
     height: 25px;
-    display: flex;
+    border: 2px solid;
 }
 
 #main-menu-button1:hover {

@@ -208,9 +208,11 @@ function setUpListeners() {
  */
 function setIndividualSettingColours(dataElement, pageElement) {
     if (dataElement == true) {
-        pageElement.style.backgroundColor = "lightgreen"; /* Set switch colour to red if option is off */
+        pageElement.style.borderColor = "lightgreen"; /* Set switch colour to red if option is off */
+        pageElement.innerText = "ON";
     } else {
-        pageElement.style.backgroundColor = "red"; /* Set switch colour to lightgreen if option is off */
+        pageElement.style.borderColor = "red"; /* Set switch colour to lightgreen if option is off */
+        pageElement.innerText = "OFF";
     }
 }
 
