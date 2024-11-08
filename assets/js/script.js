@@ -86,8 +86,8 @@ function setUpButtonEventListeners() {
             hackerGameData.timeInterval = 1;
         } else if (hackerGameData.gameSpeed === 1) {
             hackerGameData.gameSpeed = 2;
-            hackerGameData.gameRounds = 15;
-            hackerGameData.timeInterval = 0.5;
+            hackerGameData.gameRounds = 21;
+            hackerGameData.timeInterval = 0.7;
         } else {
             hackerGameData.gameSpeed = 0;
             hackerGameData.gameRounds = 45;
