@@ -99,8 +99,7 @@ body {
 /* Game settings screen */
 
 #settings-options {
-    background-color: black;
-    border: #f9fd05 solid 2px;
+    background-color: #00000077;
     margin-left: auto;
     margin-right: auto;
 }
@@ -118,7 +117,7 @@ body {
 .option-switch {
     width: 75px;
     height: 25px;
-    border: 2px solid yellow;
+    background-color: #115511;
 }
 
 #option-columns {
