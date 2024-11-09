@@ -14,6 +14,7 @@ const hackerGameData = {
     antiMalware: true,
     gameSpeed: 1,
     gameRun: "",
+    timerRun: "",
     clickFlag: true,
     //clickSound: new Audio("assets/sounds/click.mp3"),
     setUpObject: function () {
@@ -134,6 +135,7 @@ function setUpButtonEventListeners() {
  */
 function exitLoop() {
     clearInterval(hackerGameData.gameRun);
+    clearInterval(hackerGameData.timerRun);
 }
 
 /**
@@ -298,13 +300,27 @@ function placeHacker(hackerPosition, hackerType) {
     }
 }
 
+/** 
+ * The timer function to update the game clock
+ */
+function gameTimer() {
+    let timer = 30;
+    hackerGameData.timerRun = setInterval(function () {
+        timer--;
+        updateTimeLeft(timer);
+        if (timer === 0) {
+            clearInterval(this);
+        }
+    }, 1000);
+};
+
 /**
  * The main function that runs the game by calling other functions.
  **/
 function gameStart() {
 
+    gameTimer(); // Start user countdown timer
     disableStartButton(true);
-    updateTimeLeft(hackerGameData.currentTime);
     hackerGameData.clickFlag = true;
 
     // Starts the new game thread which runs every hackerGameData.timeInterval for hackerGameData.gameRounds
@@ -314,8 +330,9 @@ function gameStart() {
             removeHacker(hackerGameData.hackerLocation);
         }
 
-        if ((hackerGameData.currentTime == 0)) {
+        if ((hackerGameData.currentTime <= 0)) {
             clearInterval(hackerGameData.gameRun);
+            clearInterval(hackerGameData.timerRun);
             updateFinalScore(hackerGameData.currentScore);
             disableStartButton(false);
             hackerGameData.clickFlag = true;
@@ -335,7 +352,6 @@ function gameStart() {
             }
             hackerGameData.hackerLocation = newHackerLocation;
             hackerGameData.hackerType = newHackerType == 4 ? 1 : 0;
-            updateTimeLeft(hackerGameData.currentTime - hackerGameData.timeInterval);
             hackerGameData.clickFlag = false;
         }
     }, (hackerGameData.timeInterval * 1000), hackerGameData.gameRounds);
