@@ -12,7 +12,7 @@ const hackerGameData = {
     currentScore: 0,
     highScore: 0,
     antiMalware: true,
-    gameSpeed: 1,
+    gameSpeed: 0,
     gameRun: "",
     timerRun: "",
     clickFlag: true,
@@ -80,18 +80,24 @@ function setUpButtonEventListeners() {
     const speedSwitch = document.getElementById("speed-switch");
     speedSwitch.addEventListener("click", function () {
         new Audio("assets/sounds/click.mp3").play(); // Play sound on click
-        if (hackerGameData.gameSpeed === 0) {
-            hackerGameData.gameSpeed = 1;
-            hackerGameData.gameRounds = 30;
-            hackerGameData.timeInterval = 1;
-        } else if (hackerGameData.gameSpeed === 1) {
-            hackerGameData.gameSpeed = 2;
-            hackerGameData.gameRounds = 60;
-            hackerGameData.timeInterval = 0.5;
-        } else {
-            hackerGameData.gameSpeed = 0;
-            hackerGameData.gameRounds = 20;
-            hackerGameData.timeInterval = 1.5;
+        switch(hackerGameData.gameSpeed) {
+            // Select next game speed with the number of rounds and the time interval between rounds
+            case 0: setGameSpeed(1, 40, 0.75); 
+                    break;
+            case 1:
+                    setGameSpeed(2, 50, 0.6);
+                    break;
+            case 2:
+                    setGameSpeed(3, 20, 1.5);
+                    break;
+            case 3:
+                    setGameSpeed(4, 25, 1.2);
+                    break;
+            case 4:
+                    setGameSpeed(0, 30, 1);
+                    break;
+            default:
+                    setGameSpeed(0, 30, 1);
         }
         setSpeedText();
     });
@@ -127,6 +133,15 @@ function setUpButtonEventListeners() {
         resetGame();
         displayWindow("menu-screen");
     });
+}
+
+/**
+ * Sets the game speed settings by using the function parameters
+ */
+function setGameSpeed(gameSpeed, gameRounds, timeInterval) {
+    hackerGameData.gameSpeed = gameSpeed;
+    hackerGameData.gameRounds = gameRounds;
+    hackerGameData.timeInterval = timeInterval;
 }
 
 /**
@@ -229,13 +244,19 @@ function setAllSettingColours() {
 function setSpeedText() {
     switch(hackerGameData.gameSpeed) {
         case 0:
-            document.getElementById("speed-switch").innerText = "SLOW";
+            document.getElementById("speed-switch").innerText = "STEADY";
             break;
         case 1:
-            document.getElementById("speed-switch").innerText = "MEDIUM";
+            document.getElementById("speed-switch").innerText = "SWIFT";
             break;
         case 2:
-            document.getElementById("speed-switch").innerText = "FAST";            
+            document.getElementById("speed-switch").innerText = "BLAZE";
+            break;
+        case 3:
+            document.getElementById("speed-switch").innerText = "GLACIAL";
+            break;
+        case 4:
+            document.getElementById("speed-switch").innerText = "LEISURE";
             break;
     }
 }
