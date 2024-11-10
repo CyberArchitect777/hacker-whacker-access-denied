@@ -20,7 +20,6 @@ const hackerGameData = {
     setUpObject: function () {
         this.hackerLocation = -1;
         this.currentScore = 0;
-        hackerGameData.currentTime = (hackerGameData.gameRounds / hackerGameData.timeInterval);
         clickFlag = true;
     }
 };
@@ -87,11 +86,11 @@ function setUpButtonEventListeners() {
             hackerGameData.timeInterval = 1;
         } else if (hackerGameData.gameSpeed === 1) {
             hackerGameData.gameSpeed = 2;
-            hackerGameData.gameRounds = 15;
+            hackerGameData.gameRounds = 60;
             hackerGameData.timeInterval = 0.5;
         } else {
             hackerGameData.gameSpeed = 0;
-            hackerGameData.gameRounds = 45;
+            hackerGameData.gameRounds = 20;
             hackerGameData.timeInterval = 1.5;
         }
         setSpeedText();
@@ -309,7 +308,7 @@ function gameTimer() {
         timer--;
         updateTimeLeft(timer);
         if (timer === 0) {
-            clearInterval(this);
+            clearInterval(hackerGameData.timerRun);
         }
     }, 1000);
 };
@@ -322,6 +321,7 @@ function gameStart() {
     gameTimer(); // Start user countdown timer
     disableStartButton(true);
     hackerGameData.clickFlag = true;
+    let roundsLeft = hackerGameData.gameRounds;
 
     // Starts the new game thread which runs every hackerGameData.timeInterval for hackerGameData.gameRounds
     hackerGameData.gameRun = setInterval(function () {
@@ -330,7 +330,7 @@ function gameStart() {
             removeHacker(hackerGameData.hackerLocation);
         }
 
-        if ((hackerGameData.currentTime <= 0)) {
+        if ((roundsLeft === 0)) {
             clearInterval(hackerGameData.gameRun);
             clearInterval(hackerGameData.timerRun);
             updateFinalScore(hackerGameData.currentScore);
@@ -353,6 +353,7 @@ function gameStart() {
             hackerGameData.hackerLocation = newHackerLocation;
             hackerGameData.hackerType = newHackerType == 4 ? 1 : 0;
             hackerGameData.clickFlag = false;
+            roundsLeft--;
         }
     }, (hackerGameData.timeInterval * 1000), hackerGameData.gameRounds);
 }
@@ -392,7 +393,7 @@ const updateFinalScore = () => document.getElementById("final-score").innerText 
  */
 const updateStartingTime = () => {
     hackerGameData.setUpObject();
-    document.getElementById("time-display").innerText = "Time: " + hackerGameData.currentTime;
+    document.getElementById("time-display").innerText = "Time: 30";
 };
 
 /**
