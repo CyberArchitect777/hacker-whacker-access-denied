@@ -11,13 +11,16 @@ The original game was created during Hackathon 2 of Code Institute's "16-Week Hi
 
 # Added Features
 
-Hacker Whacker: Access Denied adds the following features on top of the original game:-
+Hacker Whacker: Access Denied makes the following changes from the original Hacker Whacker game:-
 
-- The project logos have been re-branded as is fitting for a new project.
+- The project logos have been re-branded as is fitting for a new project. Other changes have been made to update the game page to a style reflected in the new project.
+- Usability updates have been made to improve the user experience. For example, clicking the game logo text no longer sends the user back to the main menu and potentially interrupting their game.
 - A game settings page has been added to allow the user to enable or disable new features.
-- Hackers with shields appear, representing anti-malware software examining your system. Clicking them costs you 20 points, adding a new dimension to the fast-paced game. This mode is selectable in the game options.
-- Alternative speeds have been added to slow down and speed up the game.
-- Sounds have been added to promote user immersion in the game
+- New Switchable Game Mode: Ethical Hackers - Hackers with shields appear, representing ethical hackers examining your system. Clicking them costs you 20 points, adding a new dimension to the fast-paced game.
+- New Switchable Game Mode: Speed Mode - Five different speeds have been added to slow down and speed up the game according to the user preference. The default is the middle speed of the five.
+- Sounds have been added to promote user immersion in the game.
+- The in-game instructions have been naturally updated.
+- A version number has been added to all screens in the game after the project reached mature status.
 
 ## Deployment And Repository
 
@@ -48,13 +51,23 @@ This site was created using the following technologies:
 
 ## Team
 
-The original team involved in producing Hacker Whacker are shown below. As stated earlier, only Barrie Millar is involved in this sequel. However, a lot of the programming and assets used in the original are also naturally used in this project.
+This successor project was created by only one of the original team:- 
+
+* Barrie Millar - (https://github.com/CyberArchitect777)
+
+However, a lot of the programming and assets used in the original are also naturally used in this project. The original team involved in producing Hacker Whacker are shown below.
 
 * Barrie Millar - (https://github.com/CyberArchitect777)
 
 * Ahmed Alvi - (https://github.com/coder-alvi)
 
 * Sunita Arora - (https://github.com/AroraSunita)
+
+## Changelog
+
+- Version 1.0.0 (12th of November, 2024)
+
+First stable release of Hacker Whacker: Access Denied
 
 ## Credits
 
