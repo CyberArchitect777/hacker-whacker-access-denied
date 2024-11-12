@@ -1,5 +1,6 @@
 
 # Hacker Whacker: Access Denied
+## Version 1.0.0
 ## By Barrie Millar
 ### A Themed Whack-A-Mole Style Game
 
