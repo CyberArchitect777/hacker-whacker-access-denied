@@ -73,6 +73,14 @@ body {
     text-shadow: 5px 8px 10px #ff0000;
 }
 
+#version {
+    font-size: 80%;
+    color: yellow;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
 /* Multiple screen buttons */
 
 #menu-screen button,
