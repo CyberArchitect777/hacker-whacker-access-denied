@@ -66,6 +66,10 @@ However, a lot of the programming and assets used in the original are also natur
 
 ## Changelog
 
+- Version 1.0.1 (21st of November, 2024)
+
+Reduced the font size on the instruction page when used on the smallest screen sizes. This ensures the page fits into a single browser window without scrolling.
+
 - Version 1.0.0 (12th of November, 2024)
 
 First stable release of Hacker Whacker: Access Denied
